@@ -2,7 +2,7 @@ class RestaurantPizzasController < ApplicationController
 rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
     def create
         restaurant_pizza = RestaurantPizza.create!(restaurant_pizza_params)
-        render json: restaurant_pizza, status: :accepted
+        render json: restaurant_pizza, status: :created
     end
 
     private
