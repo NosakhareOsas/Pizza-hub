@@ -7,7 +7,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
     def show
         restaurant = find_restaurant
-        render json: restaurant, only: [:id, :name, :address],  methods: :all_pizzas, status: :ok
+        render json: restaurant, only: [:id, :name, :address], status: :ok
     end
 
     def destroy
