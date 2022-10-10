@@ -20,6 +20,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
     def find_restaurant
         Restaurant.find(params[:id])
     end
+    
     def render_not_found_response
         render json: { error: "Restaurant not found" }, status: :not_found
     end
