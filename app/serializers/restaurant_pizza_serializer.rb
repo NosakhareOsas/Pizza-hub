@@ -1,3 +1,3 @@
 class RestaurantPizzaSerializer < ActiveModel::Serializer
-  has_one :pizza
+  belongs_to :pizza
 end
